@@ -401,8 +401,8 @@ input[type=text], textarea[name=mensagem] {
     box-shadow: var(--shadow);
 }
 
-.curiosidades-img, .poluicao-img, .encontrar-img, onde-img,  h1 {
-    color: var(--light);
+.curiosidades-img, .poluicao-img, .encontrar-img, onde-img  h1 {
+    color:var(--primary)
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 900;
@@ -478,6 +478,19 @@ input[type=text], textarea[name=mensagem] {
     color:#333333;
     margin: 2;
     font-size: 2rem;
+}
+
+
+.fazemos_servicos h4 {
+    color:#333333;
+    margin: 2;
+    font-size: 2rem;
+}
+.fazemos_servicos p {
+    color:#333333;
+    margin: 2;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .tartarugas_texto, .financiamento p {
