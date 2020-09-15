@@ -246,7 +246,9 @@ img {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-
+.logo img{
+    display: inline;
+}
 
 
 .contentor {
@@ -337,14 +339,14 @@ img {
     font-size: 2rem;
 }
 
-.boxes a, .poluicao-img a {
+.boxes a, .poluicao-img a, .encontrar-img a, .onde-img a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
 
-.boxes a:hover, .poluicao-img a:hover{
+.boxes a:hover, .poluicao-img a:hover, .encontrar-img a:hover, onde-img a:hover {
     color: grey;
 }
 
@@ -352,25 +354,39 @@ img {
 /* Contatos css */
 
 
-.contatos h1{
-    color: black;
+.contatos, .financiamento h1{
+    color:#333333;
     padding-left: 0.5rem;
     margin: 0;
 }
 
 .contatos h4{
+    color:#333333;
     padding: 1rem;
     margin: 0;
 }
 
 .contatos p{
+    color:#333333;
     margin: 0;
     text-align: left;
 }
 
-input[type=text], textarea[name=mensagem] {
-    border: 1px solid black;
+.formulario h5 {
+    color:#333333;
+    margin: 2;
+    font-size: 2rem;
 }
+
+input[type=text], textarea[name=mensagem] {
+    border: 1px solid #333333;
+}
+.formulario label{
+        color:#333333;
+        margin: 2;
+    
+}
+
 
 /* css das curiosidades */
 
@@ -385,12 +401,14 @@ input[type=text], textarea[name=mensagem] {
     box-shadow: var(--shadow);
 }
 
-.curiosidades-img, .poluicao-img  h1 {
+.curiosidades-img, .poluicao-img, .encontrar-img, onde-img,  h1 {
     color: var(--light);
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 900;
 }
+
+/* servicos */
 
 .poluicao-img {
     min-height: 300px;
@@ -401,4 +419,93 @@ input[type=text], textarea[name=mensagem] {
     display: flex;
     flex-direction: column-reverse;
     box-shadow: var(--shadow);
+}
+
+.encontrar-img {
+        min-height: 300px;
+        background: url(./img/870765.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        box-shadow: var(--shadow);
+}
+
+.onde-img {
+    min-height: 300px;
+    background: url(./img/thumb-1920-345934.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: var(--shadow);
+
+}
+
+
+.photo:hover {
+    background-size: cover;
+}
+
+
+/* css do sobre nós */
+
+.nave_secundario ul {
+    display: grid;
+    grid-gap: 5px;
+    padding: 0;
+    list-style: none;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.nave_secundario a {
+    color: var(--primary);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.nave_secundario a:hover {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.tartarugas_texto h3 {
+    color:#333333;
+    margin: 2;
+    font-size: 2rem;
+}
+
+.tartarugas_texto, .financiamento p {
+    color:#333333;
+    margin: 2;
+    font-size: 1rem;
+}
+
+
+
+@media(max-width:800px) {
+    .contentor {
+        grid-template-areas: 
+            'showcase showcase'
+            'caixa-A caixa-B';    
+    }
+
+    .navegador ul{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:450px) {
+    .contentor {
+        grid-template-areas:
+        'showcase'
+        'caixa-A'
+        'caixa-B'
+        ;
+    }
 }
